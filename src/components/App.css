@@ -1,7 +1,17 @@
 .App {
+  width: 55%;
+}
+.secondContainer {
+  width: 45%;
+}
+.mainContainer {
+  display: flex;
+  width: 100%;
+  background-image: url(silka.jpg); 
+  background-position: center;
+  display:flex;
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +46,13 @@
     transform: rotate(360deg);
   }
 }
+h1 {
+  font-size: 40px;
+  color: white;
+}
+tasks {
+  color: white;
+
+}
+
+
