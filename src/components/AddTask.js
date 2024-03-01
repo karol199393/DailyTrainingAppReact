@@ -7,6 +7,7 @@ class AddTask extends Component {
   state = {
     muscleGroup: '',
     text: '',
+    text4: '',
     text2: '',
     text3: '',
     date: this.minDate
@@ -15,6 +16,12 @@ class AddTask extends Component {
   handleTextNameExercies = (e) => {
     this.setState({
       text: e.target.value
+    })
+  }
+
+  handleTextWeight = (e) => {
+    this.setState({
+      text4: e.target.value
     })
   }
 
@@ -45,13 +52,14 @@ class AddTask extends Component {
   handleClick = () => {
     console.log("dodaj");
 
-    const { muscleGroup,text,text2,text3,date } = this.state;
+    const { muscleGroup,text,text4,text2,text3,date } = this.state;
     if (text.length > 2) {
       const add = this.props.add(muscleGroup,text,text2,text3, date);
       if (add) {
         this.setState({
           muscleGroup: '',
           text: '',
+          text4: '',
           text2: '',
           text3: '',
           date: this.minDate
@@ -81,6 +89,7 @@ class AddTask extends Component {
         </select>
         <br />
         <input type="text" placeholder="Dodaj ćwiczenie" value={this.state.text} onChange={this.handleTextNameExercies} /> <br />
+        <input type="text" placeholder="Obciążenie w kg" value={this.state.text4} onChange={this.handleTextWeight} /> <br />
         <input type="text" placeholder="Ilość serii" value={this.state.text2} onChange={this.handleTextCountExercises} /> <br />
         <input type="text" placeholder="Ilość powtórzeń" value={this.state.text3} onChange={this.handleTextCountExercises2} /> <br />
         <label htmlFor="date">Data</label>

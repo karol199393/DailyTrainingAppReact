@@ -37,14 +37,14 @@ const Task = (props) => {
   }
   
 
-  const { musclegroup,text,text2,text3, date, id, active,finishDate } = props.task;
+  const { musclegroup,text,text4,text2,text3, date, id, active,finishDate } = props.task;
 
   if (active) {
     return (
       <div>
         <p>
          
-          <span style={style} >Partia ciała:<span style={style2}>{musclegroup}</span> Cwiczenie:<span style={style2}>{text}</span> Ilość serii: <span style={style2}>{text2}</span> Ilość powtórzeń <span style={style2}>{text3}</span> <span>{date} </span></span>
+          <span style={style} >Partia ciała:<span style={style2}>{musclegroup}</span> Cwiczenie:<span style={style2}>{text}</span>Obciążenie:<span style={style2}>{text4}</span> Ilość serii: <span style={style2}>{text2}</span> Ilość powtórzeń <span style={style2}>{text3}</span> <span>{date} </span></span>
           <button style={stylebutton} onClick={() => props.change(id)}>Już zrobione</button>
           <button style={stylebuttonx} onClick={() => props.delete(id)}>X</button>
         </p>

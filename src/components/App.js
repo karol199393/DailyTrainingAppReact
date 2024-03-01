@@ -3,6 +3,7 @@ import AddTask from './AddTask';
 import TaskList from './TaskList';
 import './App.css';
 import ExampleWorkouts from './ExampleWorkouts';
+import ProfExampleWorkouts from './ProfExampleWorkouts';
 
 
 
@@ -14,20 +15,21 @@ class App extends Component {
         id: 0,
         muscleGroup: 'klatka piersiowa',
         text: 'Wyciskanie na klatke na ławce prostej',
+        text4: '100kg',
         text2: '4',
         text3: '2',
         date: '2018-02-15',
         active: true,
         finishDate: null
       },
-      { id: 1, musclegroup: 'klatka piersiowa', text: "Wyciskanie na klatke na ławce poziomej",text2: '4', text3: '2', date: '2020-11-12',active: true, finishDate: null },
-      { id: 2, musclegroup: 'biceps', text: "Przysiady ze sztangą",text2: '4', text3: '2', date: '2019-09-11',active: true, finishDate: null },
-      { id: 3, musclegroup: 'brzuch', text: "Martwy ciąg",text2: '4', text3: '2', date: '2019-05-20',active: true, finishDate: null },
-      { id: 4, musclegroup: 'nogi', text: "Wyciskanie żołnierskie",text2: '4', text3: '2', date: '2020-11-12', active: true, finishDate: null },
-      { id: 5, musclegroup: 'triceps', text: "Wyciskanie hantli na ławce(barki)",text2: '4', text3: '2', date: '2019-09-11', active: true, finishDate: null },
-      { id: 6, musclegroup: 'klatka piersiowa', text: "Rozpiętki z hantlami",text2: '4', text3: '2', date: '2019-05-20', active: true, finishDate: null },
-      { id: 7, musclegroup: 'plecy', text: "Podciąganie sztangi(plecy)",text2: '4', text3: '2', date: '2020-11-12',active: true, finishDate: null },
-      { id: 8, musclegroup: 'biceps', text: "Suplinacja z hantlami",text2: '4', text3: '2', date: '2019-09-11',active: true, finishDate: null },
+      { id: 1, musclegroup: 'klatka piersiowa', text: "Wyciskanie na klatke na ławce poziomej",text4: '100kg',text2: '4', text3: '2', date: '2020-11-12',active: true, finishDate: null },
+      { id: 2, musclegroup: 'biceps', text: "Przysiady ze sztangą",text4: '100kg',text2: '4', text3: '2', date: '2019-09-11',active: true, finishDate: null },
+      { id: 3, musclegroup: 'brzuch', text: "Martwy ciąg",text4: '100kg',text2: '4', text3: '2', date: '2019-05-20',active: true, finishDate: null },
+      { id: 4, musclegroup: 'nogi', text: "Wyciskanie żołnierskie",text4: '100kg',text2: '4', text3: '2', date: '2020-11-12', active: true, finishDate: null },
+      { id: 5, musclegroup: 'triceps', text: "Wyciskanie hantli na ławce(barki)",text4: '100kg',text2: '4', text3: '2', date: '2019-09-11', active: true, finishDate: null },
+      { id: 6, musclegroup: 'klatka piersiowa', text: "Rozpiętki z hantlami",text4: '100kg',text2: '4', text3: '2', date: '2019-05-20', active: true, finishDate: null },
+      { id: 7, musclegroup: 'plecy', text: "Podciąganie sztangi(plecy)",text4: '100kg',text2: '4', text3: '2', date: '2020-11-12',active: true, finishDate: null },
+      { id: 8, musclegroup: 'biceps', text: "Suplinacja z hantlami",text4: '100kg',text2: '4', text3: '2', date: '2019-09-11',active: true, finishDate: null },
 
     ]
   }
@@ -90,6 +92,12 @@ class App extends Component {
       exampleExercises: e.target.value
     });
   }
+
+  handleprofExampleWorkouts = (e) => {
+    this.setState({
+      exampleWorkouts: e.target.value
+    })
+  }
   
   
 
@@ -104,7 +112,7 @@ class App extends Component {
         </div>
       </div>
       <div className="secondContainer">
-      <h1>Przykładowe treningi</h1>
+      <h1>Przykładowe ćwiczenia</h1>
         <label htmlFor="exampleExercies" style={styleText}>POKAZ TRENING:</label>
         <select id="exampleExercies" style={styleCheckbox} value={this.state.exampleExercises} onChange={this.handleExercises }>
         <option value="brak">Wybierz trening</option>
@@ -117,9 +125,21 @@ class App extends Component {
 
         <div id="exampleWorkouts">
         <ExampleWorkouts style={styleEW} exampleExercises={this.state.exampleExercises} /> </div>
+
+        <div className="profExampleWorkouts">
+        <h1>Przykładowe treningi</h1>
+        <label htmlFor="profExampleWorkouts" style={styleEW}>POKAZ TRENING:</label>
+        <select id="profExampleWorkouts" style={styleCheckbox} value={this.state.exampleWorkouts} onChange={this.handleprofExampleWorkouts }>
+        <option value="brak">Wybierz trening</option>
+        <option value="fbwA" >FBW A</option>  
+        <option value="fbwB">FBW B</option>
+        <option value="fbwC">FBW C</option>
+        </select>
+        <div id="profExampleWorkouts">
+        <ProfExampleWorkouts style={styleText} exampleWorkouts={this.state.exampleWorkouts} /> </div>
+
       </div>
-
-
+      </div>
       </div>
     );
   }

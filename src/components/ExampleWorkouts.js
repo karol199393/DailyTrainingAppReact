@@ -9,7 +9,6 @@ const ExampleWorkouts = (props) => {
         <li>Wyciskanie na klatke na ławce prostej (4 razy) (10 powtórzeń)</li>
         <li>Wyciskanie na klatke na ławce poziomej (4 razy) (10 powtórzeń)</li>
         <li>Rozpiętki z hantlami (4 razy) (10 powtórzeń)</li>
-        <li>Podciąganie sztangi(plecy) (4 razy)(10 powtórzeń)</li>
       </ul>
     );
   } else if (exampleExercises === "biceps") {

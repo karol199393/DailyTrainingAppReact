@@ -11,7 +11,13 @@
   background-position: center;
   display:flex;
   text-align: center;
+
 }
+.profExampleWorkouts {
+  margin-top: 250px;
+  text-align: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
