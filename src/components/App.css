@@ -7,9 +7,8 @@
 .mainContainer {
   display: flex;
   width: 100%;
-  background-image: url(silka.jpg); 
-  background-position: center;
-  display:flex;
+  background-image: url(silka.jpg);
+  background-size: cover;
   text-align: center;
 
 }
