@@ -145,21 +145,21 @@ class App extends Component {
   }
 }
 const styleCheckbox = {
-  fontSize: '25px',
-  color: 'white',
+  fontSize: '30px',
   height: '36px',
-  width: '250px', }
+  width: '250px',
+  color: 'black',
+ }
 
 const styleText = {
-  
-  color: 'white',
+  textColor: 'black',
   FontFace: 'Times New Roman',
   fontSize: '24px',
   textAlign: 'center',
 }  
 
 const styleEW = {
-  color: 'white',
+  textColor: 'black',
   FontFace: 'Times New Roman',
   fontSize: '24px',
   textAlign: 'center',

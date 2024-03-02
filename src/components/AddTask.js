@@ -54,7 +54,7 @@ class AddTask extends Component {
 
     const { muscleGroup,text,text4,text2,text3,date } = this.state;
     if (text.length > 2) {
-      const add = this.props.add(muscleGroup,text,text2,text3, date);
+      const add = this.props.add(muscleGroup,text,text4,text2,text3, date);
       if (add) {
         this.setState({
           muscleGroup: '',
@@ -80,7 +80,7 @@ class AddTask extends Component {
         <label htmlFor="muscleGroup" style={style}>PARTIA MIĘŚNIOWA</label>
         <br />
         <select id="muscleGroup" style={styleCheckbox} value={this.state.muscleGroup} onChange={this.handleMuscleGroup }>
-        <option value="brak">Wybierz partie mięśniową</option>
+        <option value="brak">Wybierz partie</option>
         <option value="klatka piersiowa">Klatka piersiowa</option>  
         <option value="biceps">Biceps</option>
         <option value="brzuch">Brzuch</option>
@@ -108,10 +108,10 @@ const style = {
   textAlign: 'center',
 } 
 const styleCheckbox = {
-  color: 'white',
+  color: 'black',
   height: '36px',
   width: '270px',
-  fontSize: '25px',
+  fontSize: '30px',
  }
 
 
